@@ -1,0 +1,1 @@
+const {query}=require('../db');const log=async(actor,action,target='',details='')=>query('INSERT INTO audit_log(actor_id,action,target,details) VALUES($1,$2,$3,$4)',[actor,action,target,details]);module.exports={log};
